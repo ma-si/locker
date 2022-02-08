@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'locker'`, () => {
+  it(`should have as title 'Waste Management Phoenix Open'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('locker');
+    expect(app.title).toEqual('Waste Management Phoenix Open');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('locker app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Waste Management Phoenix Open');
   });
 });

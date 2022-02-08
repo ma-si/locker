@@ -1,0 +1,30 @@
+<mat-table #table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="position">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Position </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="totalScore">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Total Score </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.totalScore}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="roundTotalScores">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Round Total Scores </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.roundTotalScores}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="totalStrokes">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Total Strokes </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.totalStrokes}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
